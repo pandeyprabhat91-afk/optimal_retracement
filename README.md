@@ -4,7 +4,7 @@ GPS-loss path retrace for multicopters. Six cumulative sensor sets flown
 through three testbeds sharing one estimator core: real-log replay, a perfect
 analytic world, and a live PX4 SITL square with raw and with perfect sensors.
 
-Paper (prebuilt): [`docs/GPS_LOSS_RETRACE_PAPER.pdf`](docs/GPS_LOSS_RETRACE_PAPER.pdf)
+
 
 ## The setup in 30 seconds
 
