@@ -4,8 +4,8 @@ Which sensors bring a drone home when GPS dies? This repo answers with three
 experiments sharing one estimator core: real-log replay, a perfect analytic
 world, and a live PX4 SITL square with raw and perfect sensors.
 
-Paper: `docs/GPS_LOSS_RETRACE_PAPER.docx` / `.pdf` (built from
-`scripts/retrace/build_paper_*.py`). headline results in §5.
+Paper: `docs/GPS_LOSS_RETRACE_PAPER.docx` / `.pdf` (prebuilt; generators
+omitted from this repo). Headline results in §5.
 
 ## Repo map (this branch)
 
@@ -13,7 +13,6 @@ Paper: `docs/GPS_LOSS_RETRACE_PAPER.docx` / `.pdf` (built from
   matrix → `output/retrace/results.csv`), `optimal_world.py` (F1-F6 →
   `optimal_results.csv`), `sitl_optimal.py` (SITL perfect-sensor control →
   `sitl_optimal_results.csv`), `sitl_loop.py` (autonomous loop driver),
-  `build_paper_docx.py` / `build_paper_pdf.py` (paper builders),
   `replay_retrace.py`, `estimator.py`, `metrics.py`, `combos.yaml`.
 - `sitl/` — SITL package + container scripts + data for this branch:
   `retrace_nav/` (ROS 2 estimator node + flight commander),
@@ -40,14 +39,8 @@ Inputs: `datasets/flight_logs/*.BIN` (paths at top of `run_matrix.py` /
 `replay_retrace.py`; edit if your checkout lives elsewhere).
 Outputs: `output/retrace/results.csv` (72 rows: C1-C6 x 10/30/60 s x
 Flight A/B x Exp1/Exp2), `optimal_results.csv` (F1-F6),
-`sitl_optimal_results.csv` (C1-C6 on perfect SITL geometry).
-
-Rebuild the paper (needs `output/retrace/figs/*.png`):
-
-```
-.\.venv\Scripts\python.exe -X utf8 -u scripts/retrace/build_paper_docx.py
-.\.venv\Scripts\python.exe -X utf8 -u scripts/retrace/build_paper_pdf.py
-```
+`sitl_optimal_results.csv` (C1-C6 on perfect SITL geometry). The paper in
+`docs/` is prebuilt from these outputs plus `output/retrace/figs/*.png`.
 
 Expected key numbers: F1 0.21 m / 801 m; A C4 30 s 8.8 m (from 119);
 B C6 30 s 0.6 m; SITL-optimal C1 0.006 m / 80 m.
