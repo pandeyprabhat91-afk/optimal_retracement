@@ -1,0 +1,13 @@
+combos:
+  C1: {sensors: [gyr, acc]}
+  C2: {sensors: [gyr, acc, mag_yaw]}
+  C3: {sensors: [gyr, acc, mag_yaw, baro_alt]}
+  C4: {sensors: [gyr, acc, mag_yaw, baro_alt, thrust_drag]}
+  C5: {sensors: [gyr, acc, mag_yaw, baro_alt, thrust_drag, battery]}
+  C6: {sensors: [gyr, acc, mag_yaw, baro_alt, thrust_drag, battery, zupt]}
+horizons_s: [10, 30, 60]
+gates: {hdop_max: 1.0, nsats_min: 10, gps_status_min: 3, static_spd_max: 0.3}
+success:
+  exp1_drift_pct_30s: 2.0
+  exp1_c4_gain_pct: 15.0
+  exp2_return_m: 5.0

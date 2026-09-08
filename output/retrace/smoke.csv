@@ -1,0 +1,2 @@
+log,cutoff,combo,exp,ate,cross_track,drift_rate,home_miss,success,vert_rmse,yaw_rmse
+E:\kp_vio\datasets\flight_logs\00000061.BIN,30.0,C3,exp1,1432.2591368106873,0.0,144.89838079102978,4346.258463741326,False,25.77326667780912,35.609943424299544
