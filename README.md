@@ -35,8 +35,6 @@ sensor dirt (VRE +0.46 m/s2, aliasing spikes, EKF wobble).
    .\.venv\Scripts\python.exe -X utf8 -u scripts\retrace\run_matrix.py
    .\.venv\Scripts\python.exe -X utf8 -u scripts\retrace\optimal_world.py
    .\.venv\Scripts\python.exe -X utf8 -u scripts\retrace\sitl_optimal.py
-   .\.venv\Scripts\python.exe -X utf8 -u scripts\retrace\build_paper_docx.py
-   .\.venv\Scripts\python.exe -X utf8 -u scripts\retrace\build_paper_pdf.py
    ```
    Expected: F1 0.21 m; A C4 30 s 8.8 m; SITL-optimal C1 0.006 m.
 4. Live SITL (Docker + PX4/Gazebo): follow `sitl/README.md` Part 2, then
